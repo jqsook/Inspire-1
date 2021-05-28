@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/style/main.css" />
+    <!--Used from spells-->
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>Inspire</title>
+  </head>
+  <!-- HEADER -->
+  <body>
+    <header>
+      <nav class="navbar navbar-dark navbar-expand bg-dark text-light p-2">
+        <!-- Clock section -->
+        <input class="p-1" type="text" id="time" />
+        <div class="p-2">Welcome Agent</div>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Weather Card -->
+      <div class="container-fluid">
+        <div class="row flex-end">
+          <div class="card" style="width: 18rem">
+            <div class="card-body bg-dark">
+              <h5 class="card-title text-light">Weather</h5>
+              <p class="card-text text-light">Some quick example text</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <!-- TODO list item box -->
+        <div class="col-3 m-3 bg-light px-0 border border-dark">
+          <div class="text-light" style="background-color: #1a3649" name="p">
+            <span class="ml-2">TODO LIST</span>
+          </div>
+          <div class="row justify-content-center py-1 card-body">
+            <!-- check box section fo the form -->
+            <div class="form-check" name="chkBox">
+              <ul id="content">
+                <li class="col-12 flex-column">
+                  <input
+                    required
+                    minlength="2"
+                    maxlength="15"
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    name="defaultCheck"
+                  />
+                  <label class="form-check-label" for="defaultCheck">
+                    Todo
+                  </label>
+                  <button
+                    name="repairItem"
+                    onclick="app.checkItemsController.endRepairItem('${t.id}')"
+                  >
+                    <span class="bg-transparent">🗑</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <form
+              onsubmit="app.checkItemsController.addCheckItem(event, 'taskId' )"
+            >
+              <div class="input-group p-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  placeholder="Add Todo.."
+                  required
+                  minlength="2"
+                  maxlength="15"
+                />
+                <div class="input-group-append">
+                  <button class="p-0 border-0">
+                    <span class="input-group-text">✚</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER - includes QUOTE and IMG -->
+    <footer class="container-fluid bg-dark text-light">
+      <div class="row text-center">
+        <!-- IMG -->
+        <div class="col-2"></div>
+        <!-- QUOTE -->
+        <div class="col-8"></div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT TAGS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="app/main.js" type="module"></script>
+  </body>
+</html>
+
+<!-- Check Boxes -->
+<!-- <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
+</div> -->
