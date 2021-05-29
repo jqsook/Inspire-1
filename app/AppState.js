@@ -1,5 +1,5 @@
 import Value from "./Models/Value.js"
-import Weather from "./Models/Weather.js"
+import { Weather } from "./Models/Weather.js"
 
 
 
@@ -9,6 +9,9 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter {
   /** @type {Value[]} */
   values = []
+  
+  /** @type {Weather[]} */
+  weathers = []
   
 
 

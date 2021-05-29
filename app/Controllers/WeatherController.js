@@ -1,9 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { weatherService } from "../Services/WeatherService.js"
 
-// Ref- https://stackoverflow.com/questions/8888491/how-do-you-display-javascript-datetime-in-12-hour-am-pm-format
-
-
 // Clock in Nav bar
 function drawClock() {
     let today = new Date();
@@ -13,13 +10,21 @@ function drawClock() {
     // console.log(time)  This works
 }
 
-
 export default class WeatherController {
     constructor() {
-        // console.log("controller is linked"); //This works
+        
+        console.log("controller is linked"); //Works
         drawClock()
         
-        
+    }
+
+    getWeather() {
+        try {
+            console.log('Weather in controller try')
+            weatherService.getWeather()
+        } catch (error) {
+            
+        }
     }
     
 }
