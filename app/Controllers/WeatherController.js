@@ -13,20 +13,20 @@ function drawClock() {
 export default class WeatherController {
     constructor() {
         
-        console.log("controller is linked"); //Works
+        // console.log("controller is linked"); //Works
         drawClock()
+        //this.getWeather()
         
     }
-
-    getWeather() {
-        try {
-            console.log('Weather in controller try')
-            weatherService.getWeather()
-        } catch (error) {
-            
+        getWeather() {
+            try {
+                //console.log('Weather in controller try')
+                weatherService.getWeather()
+            } catch (error) {
+                
+            }
         }
-    }
-    
+        
 }
 
 

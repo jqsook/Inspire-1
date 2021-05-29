@@ -18,10 +18,16 @@
   <!-- HEADER -->
   <body>
     <header>
-      <nav class="navbar navbar-dark navbar-expand bg-dark text-light p-2">
+      
+      <nav class="navbar navbar-dark navbar-expand bg-dark text-light p-2 justify-content-end">
         <!-- Clock section -->
-        <input class="p-1" type="text" id="time" />
-        <div class="p-2">Welcome Agent</div>
+        <input class="p-1 mr-5" type="text" id="time" />
+        <div class="p-2 mr-5">Welcome Agent K</div>
+         <form class="d-flex" onsubmit="app.TODOController.addTodo(event, 'todoId' )">
+           <!-- TODO Input -->
+        <input class="form-control me-2" type="input" placeholder="Replicant" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">ADD</button>
+      </form>
       </nav>
     </header>
     <!-- Main -->
@@ -33,75 +39,65 @@
             <div class="card-body bg-dark">
               <h5 class="card-title text-light">Weather</h5>
               <p class="card-text text-light">Some quick example text</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary">Celcius/Fahrenhit</a>
             </div>
           </div>
         </div>
+        
+        
         <!-- TODO list item box -->
-        <div class="col-3 m-3 bg-light px-0 border border-dark">
-          <div class="text-light" style="background-color: #1a3649" name="p">
-            <span class="ml-2">TODO LIST</span>
-          </div>
-          <div class="row justify-content-center py-1 card-body">
-            <!-- check box section fo the form -->
-            <div class="form-check" name="chkBox">
-              <ul id="content">
-                <li class="col-12 flex-column">
-                  <input
-                    required
-                    minlength="2"
-                    maxlength="15"
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    name="defaultCheck"
-                  />
-                  <label class="form-check-label" for="defaultCheck">
-                    Todo
-                  </label>
-                  <button
-                    name="repairItem"
-                    onclick="app.checkItemsController.endRepairItem('${t.id}')"
-                  >
-                    <span class="bg-transparent">🗑</span>
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <form
-              onsubmit="app.checkItemsController.addCheckItem(event, 'taskId' )"
-            >
-              <div class="input-group p-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="name"
-                  placeholder="Add Todo.."
-                  required
-                  minlength="2"
-                  maxlength="15"
-                />
-                <div class="input-group-append">
-                  <button class="p-0 border-0">
-                    <span class="input-group-text">✚</span>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </main>
 
-    <!-- FOOTER - includes QUOTE and IMG -->
+      <div class="container-fluid ">
+       <div class="row justify-content-end">
+          <div class="col-4">
+            <div class="list-group">
+              <label class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="">
+    Breakfast- Most important meal of the day
+              </label>
+      <label class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="">
+    Replicant:
+              </label>
+    <label class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="">
+    Replicant:
+  </label>
+  <label class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="">
+    Replicant:
+  </label>
+  <label class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="">
+    Replicant:
+  </label>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Quote Box -->
+<div>
+  <p class="text-light">
+    Quote of the day
+  </p>
+  <p class="text-light">
+    Author
+  </p>
+</div>    
+
+
+
+</main>
+
+    <!-- FOOTER - includes IMG -->
     <footer class="container-fluid bg-dark text-light">
       <div class="row text-center">
         <!-- IMG -->
         <div class="col-2">
           <img src="" alt="" />
         </div>
-        <!-- QUOTE -->
-        <div class="col-8"></div>
+       
       </div>
     </footer>
 

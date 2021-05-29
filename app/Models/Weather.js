@@ -12,7 +12,7 @@ export class Weather{
 
 
     get template() {
-         return /*htm*/`
+        return /*htm*/`
     <div class="card" style="width: 18rem">
             <div class="card-body bg-dark">
               <h5 class="card-title text-light">Weather</h5>
