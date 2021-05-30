@@ -5,7 +5,7 @@ export const sandBoxWeatherApi = axios.create({
     timeout: 10000
 })
 export const weatherApi = axios.create({ 
-    baseURL: "https://api.weather.gov/points/43.6135,-116.2035",
+    baseURL: "https://api.weather.gov/gridpoints/BOI/132,85/forecast",
     timeout: 10000
 })
 
@@ -24,10 +24,6 @@ export const sandBoxImagesApi = axios.create({
     baseURL: "https://bcw-sandbox.herokuapp.com/api/images",
     timeout: 10000
 })
-// export const imagesApi = axios.create({
-//     baseURL: "",
-//     timeout: 10000
-// })
 
 // API - YOURNAME/todos
 export const Api = axios.create({

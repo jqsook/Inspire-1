@@ -15,7 +15,7 @@ export default class WeatherController {
         
         // console.log("controller is linked"); //Works
         drawClock()
-        //this.getWeather()
+        this.getWeather()
         
     }
         getWeather() {

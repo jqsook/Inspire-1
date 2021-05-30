@@ -12,10 +12,10 @@ class WeatherService{
             //console.log('show me the weather')
             let res = await weatherApi.get()
             console.log("You are in weather services", res.data.results)
-            debugger
-            res.data.results.forEach(w => {
-            ProxyState.weathers.push(new Weather(w))
-            })
+            //debugger
+            //res.data.results.forEach(w => {
+            //ProxyState.weathers.push(new Weather(w))
+            //})
             ProxyState.weathers = ProxyState.weathers
         }
 }

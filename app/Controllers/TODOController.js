@@ -1,10 +1,10 @@
 import { ProxyState } from '../AppState.js'
-import { todosService } from "../Services/TODOServices.js"
-import { loadState } from "../Utils/LocalStorage.js"
+import { todosService } from "../Services/TODOService.js"
+
 
 export default class TODOController{
     constructor() {
-        console.log('todo controller is up')
+        //console.log('todo controller is up')
         
     }
 

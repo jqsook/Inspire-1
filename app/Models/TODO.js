@@ -1,5 +1,5 @@
 export class TODO{
-    constructor({ name, TODO }) {
+    constructor({ name }) {
         this.name = name
         this.todo = todo
     }

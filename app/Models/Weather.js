@@ -1,7 +1,8 @@
 export class Weather{
-    constructor(data) {
-        this.description = data.description
-        this.icon = data.icon
+  constructor(data) {
+      this.name = data.name
+        this.description = data.weather.description
+        this.icon = data.weather.icon
         this.temp = data.temp
 
 
