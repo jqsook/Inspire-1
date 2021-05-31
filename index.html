@@ -25,8 +25,8 @@
         <div class="p-2 mr-5">Welcome Agent: <span id="agent" ${name}></span></div>
         
         <!-- TODO Input -->
-         <form class="d-flex" onsubmit="app.todoController.createTodo(event, 'todoId')">
-        <input required class="form-control me-2" type="input" placeholder="Add Todo" aria-label="Search">
+         <form class="d-flex" onsubmit="app.todoController.createTodo(event)">
+        <input required class="form-control me-2" type="input" name ="name" placeholder="Follow the white rabbit">
         <button class="btn btn-outline-success" type="submit">ADD</button>
       </form>
 
@@ -62,7 +62,7 @@
                             value=""
                             name="defaultCheck"/>
                           <label class="form-check-label" for="defaultCheck">
-                            Find Dekard
+                            Find Deckard
                           </label>
                           <button name="repairItem" onclick="app.todosController.deleteTodo('${t.id}')"><span class="bg-transparent">🗑</span></button> 
                           </li>

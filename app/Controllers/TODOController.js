@@ -1,3 +1,4 @@
+// import { render } from 'sass';
 import { ProxyState } from '../AppState.js'
 import { todosService } from "../Services/TODOService.js"
 
@@ -5,7 +6,7 @@ import { todosService } from "../Services/TODOService.js"
 window.onload = function agentPrompt() {
         var name = prompt('Enter Agent Name');
         if (name != null && name != "") {
-            // alert(name);
+            alert("Wake up " + name + " the Matrix has you");
             ProxyState.todos.push(name) //I think this pushes to temp storage???
         }
     document.getElementById('agent').innerText = name
@@ -14,13 +15,12 @@ window.onload = function agentPrompt() {
 
     // This should draw the card that loads the 
 function _drawTodos() {
-    console.log("You are in todo draw- button works")
-    let tasks = ProxyState.tasks
-    let taskElm = document.getElementById('todolist')
+    // console.log("You are in todo draw- button works")
+    let todos = ProxyState.todos
+    let todoElm = document.getElementById('todolist')
     let template = ''
-    todos.forEach(t => {
-        let todos = ProxyState.todos.filter(t => t.todos == t.id)
-        template += `
+        todos.forEach(t => {
+            template += `
                <div class="col-4 bg-dark ml-5" id="todolist">
              <div class="form-check text-light" name="chkBox" > 
                           <ul id="content">
@@ -34,7 +34,7 @@ function _drawTodos() {
                             value=""
                             name="defaultCheck"/>
                           <label class="form-check-label" for="defaultCheck">
-                            Find Dekard
+                            ${t.name}
                           </label>
                           <button name="repairItem" onclick="app.todosController.deleteTodo('${t.id}')"><span class="bg-transparent">🗑</span></button> 
                           </li>
@@ -42,7 +42,8 @@ function _drawTodos() {
                         </div>
                 </div>
                 `
-                taskElm.innerHTML = template
+        
+                todoElm.innerHTML = template
     })
 }
     
@@ -64,9 +65,9 @@ export default class TODOController {
             
         }
         todosService.createTodo(newTodos)
-        
         form.reset()
-        
+        _drawTodos()
+       
      }
 
 }
