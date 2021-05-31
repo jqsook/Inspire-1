@@ -9,7 +9,7 @@ class TODOService {
         
         ProxyState.on('todos')
         
-        console.log('in the items service', ProxyState.todos)
+        console.log('in the TODO service', ProxyState.todos)
     }
 }
 

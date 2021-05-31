@@ -1,7 +1,9 @@
+import { generateId } from "../Utils/GenerateId.js"
+
+
 export class TODO{
-    constructor({ name }) {
-        this.name = name
-        this.todo = todo
+    constructor({ id }) {
+        this.id = id || generateId()
     }
 
     get template() {
