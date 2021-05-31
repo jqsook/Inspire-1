@@ -105,3 +105,32 @@ edited todo object as data for request
 Delete Request Method
 Delete Todo by id
 /YOURNAME/todos/:todoId
+
+ <div class="container-fluid ">
+       <div class="row justify-content-end">
+          <div class="col-4">
+            <div class="list-group">
+              <label class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="">
+    Breakfast- Most important meal of the day
+              </label>
+      <label class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="">
+    Replicant:
+              </label>
+    <label class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="">
+    Replicant:
+  </label>
+  <label class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="">
+    Replicant:
+  </label>
+  <label class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="">
+    Replicant:
+  </label>
+</div>
+</div>
+</div>
+</div>

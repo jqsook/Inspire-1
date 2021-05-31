@@ -1,7 +1,7 @@
 import { ProxyState } from "../AppState.js";
 import { weatherService } from "../Services/WeatherService.js"
 
-// Clock in Nav bar
+// Clock in Nav bar- used to keep time- now it only updates on refresh- move the drawfunction call???
 function drawClock() {
     let today = new Date();
     let time = today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
@@ -15,7 +15,7 @@ export default class WeatherController {
         
         // console.log("controller is linked"); //Works
         drawClock()
-        this.getWeather()
+        //this.getWeather()
         
     }
         getWeather() {

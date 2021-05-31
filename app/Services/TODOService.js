@@ -3,8 +3,13 @@ import { TODO } from "../Models/TODO.js"
 
 
 class TODOService {
-    constructor() {
-        //console.log("The service is up")
+       createTodo(newtodos) {
+        ProxyState.todos = [...ProxyState.todos, new TODO(newtodos)]
+        ProxyState.todos = ProxyState.todos
+        
+        ProxyState.on('todos')
+        
+        console.log('in the items service', ProxyState.todos)
     }
 }
 

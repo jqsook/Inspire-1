@@ -21,72 +21,74 @@
       
       <nav class="navbar navbar-dark navbar-expand bg-dark text-light p-2 justify-content-end">
         <!-- Clock section -->
-        <input class="p-1 mr-5" type="text" id="time" />
-        <div class="p-2 mr-5">Welcome Agent K</div>
-         <form class="d-flex" onsubmit="app.TODOController.addTodo(event, 'todoId' )">
-           <!-- TODO Input -->
-        <input class="form-control me-2" type="input" placeholder="Add Task" aria-label="Search">
+        <input  class="p-1 mr-5" type="text" id="time" />
+        <div class="p-2 mr-5">Welcome Agent: <span id="agent" ${name}></span></div>
+        
+        <!-- TODO Input -->
+         <form class="d-flex" onsubmit="app.TODOController.createTodo(event, 'todoId')">
+        <input required class="form-control me-2" type="input" placeholder="Add Task" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">ADD</button>
       </form>
+
       </nav>
     </header>
     <!-- Main -->
     <main>
       <!-- Weather Card -->
-      <div class="container-fluid">
-        <div class="row flex-end">
-          <div class="card" style="width: 18rem">
+      <div class="container-fluid ">
+        <div class="row ">
+          <div class="col-4">
+          <div class="card p-4 ml-4 mt-3" style="width: 18rem">
             <div class="card-body bg-dark">
               <h5 class="card-title text-light">Weather</h5>
-              <p class="card-text text-light">Some quick example text</p>
-              <a href="#" class="btn btn-primary">Celcius/Fahrenhit</a>
+              <p class="card-text text-light">Button Works</p>
+              <a href="https://media.tenor.com/images/f0e22aca6a9498ce63497ca56fb49602/tenor.gif" class="btn btn-primary">Celcius/Fahrenhit</a>
             </div>
           </div>
-        </div>
-        
-        
-        <!-- TODO list item box -->
+        </div>  
 
-      <div class="container-fluid ">
-       <div class="row justify-content-end">
-          <div class="col-4">
-            <div class="list-group">
-              <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="">
-    Breakfast- Most important meal of the day
-              </label>
-      <label class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="">
-    Replicant:
-              </label>
-    <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Replicant:
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Replicant:
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Replicant:
-  </label>
-</div>
-</div>
-</div>
-</div>
+        <!-- TODO list item box lol its orange -->
+      
+        <div class="col-4 bg-dark" name="todolist">
+             <div class="form-check text-light" name="chkBox" > 
+                          <ul id="content">
+                            <li class="col-12 flex-column">
+                            <input
+                            required
+                            minlength="2"
+                            maxlength="15"
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            name="defaultCheck"/>
+                          <label class="form-check-label" for="defaultCheck">
+                            Replicant: Dekard
+                          </label>
+                          <button name="repairItem" onclick="app.checkItemsController.endRepairItem('${t.id}')"><span class="bg-transparent">🗑</span></button> 
+                          </li>
+                          </ul>
+                        </div>
+                </div>
+          </div>
+      </div>
+</div> 
+
+<!--Improvised weather adaption  -->
+        <div class="container-fluid">
+          <div class="col-4 mt-3">
+          <div id="wwo-weather-widget-3"></div><script type='text/javascript' src='https://www.worldweatheronline.com/widget/v5/weather-widget.ashx?loc=2564910&wid=3&tu=1&div=wwo-weather-widget-3' async></script><noscript><a href="https://www.worldweatheronline.com/boise-weather/idaho/us.aspx" alt="Hour by hour Boise, Idaho weather">Boise, Idaho weather forecast hourly</a></noscript>
+          </div>
+        </div>
 
 <!-- Quote Box -->
-<div>
+<div class="text-center">
   <p class="text-light">
-    Quote of the day
+    “Dude, suckin' at something is the first step to being sorta good at something.”
   </p>
-  <p class="text-light">
-    Author
+  <p class="text-light hidden-text-hover">
+    -Jake the Dog-
   </p>
 </div>    
-
-
 
 </main>
 
@@ -103,15 +105,9 @@
 
     <!-- SCRIPT TAGS -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="app/main.js" type="module"></script>
   </body>
 </html>
 
-<!-- Check Boxes -->
-<!-- <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
-  </label>
-</div> -->
+
