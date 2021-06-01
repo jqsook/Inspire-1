@@ -6,8 +6,8 @@ import { todosService } from "../Services/TODOService.js"
 window.onload = function agentPrompt() {
         var name = prompt('Enter Agent Name');
         if (name != null && name != "") {
-            alert("Wake up " + name + " the Matrix has you");
-            ProxyState.todos.push(name) //I think this pushes to temp storage???
+            alert("Welcome Agent " + name);
+            // ProxyState.todos.push(name) 
         }
     document.getElementById('agent').innerText = name
     } //I could probably add a save/load state to this so It will hold- how to reset that though? Add load save state that works with the other load/savestates  
