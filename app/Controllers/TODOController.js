@@ -21,7 +21,7 @@ function _drawTodos() {
     let template = ''
         todos.forEach(t => {
             template += `
-               <div class="col-4 bg-dark ml-5" id="todolist">
+               <div class="col-12 bg-dark ml-5" id="todolist">
              <div class="form-check text-light" name="chkBox" > 
                           <ul id="content">
                             <li class="col-12 flex-column">
@@ -34,7 +34,7 @@ function _drawTodos() {
                             value=""
                             name="defaultCheck"/>
                           <label class="form-check-label" for="defaultCheck">
-                            ${t.name}
+                            ${t.todo}
                           </label>
                           <button name="repairItem" onclick="app.todosController.deleteTodo('${t.id}')"><span class="bg-transparent">🗑</span></button> 
                           </li>
@@ -60,7 +60,7 @@ export default class TODOController {
         console.log("button works")
         let form = event.target
         let newTodos = {
-            name: form.name.value,
+            todo: form.todo.value,
             id: form.id.value,
             
         }

@@ -2,8 +2,9 @@ import { generateId } from "../Utils/GenerateId.js"
 
 
 export class TODO{
-    constructor({ id }) {
+    constructor({ todo, id }) {
         this.id = id || generateId()
+        this.todo = todo
     }
 
     get template() {
